@@ -26,15 +26,77 @@ body{
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     padding: 1.5rem;
-    border-radius: 0.8rem;
-    width: 25%;
+    border-radius: .8rem;
+    width: 30%;
 }
 
 .single-top{
     text-align: center;
     text-transform: uppercase;
+    border: .15rem solid var(--first-color);
+    padding: .5rem;
 }
 
 fieldset{
-    border: 0.3rem solid var(--first-color);
+    border: .15rem solid var(--first-color);
+}
+
+.input-box{
+    position: relative;
+}
+
+.user-input{
+    background: none;
+    border: none;
+    border-bottom: .1rem solid white;
+    outline: none;
+    color: var(--text-color-white);
+    font-size: 1rem;
+    width: 100%;
+    letter-spacing: .2rem;
+}
+
+.city-input{
+    background: none;
+    border: none;
+    border-bottom: .1rem solid white;
+    outline: none;
+    color: var(--text-color-white);
+    font-size: 1rem;
+    width: 100%;
+    letter-spacing: .2rem;
+}
+
+.state-input{
+    background: none;
+    border: none;
+    border-bottom: .1rem solid white;
+    outline: none;
+    color: var(--text-color-white);
+    font-size: 1rem;
+    width: 100%;
+    letter-spacing: .2rem;
+}
+
+.address-input{
+    background: none;
+    border: none;
+    border-bottom: .1rem solid white;
+    outline: none;
+    color: var(--text-color-white);
+    font-size: 1rem;
+    width: 100%;
+    letter-spacing: .2rem;
+}
+
+.input-label{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.user-input:focus ~ .input-label{
+    font-size: 0px;
 }
