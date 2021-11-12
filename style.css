@@ -2,9 +2,13 @@
     /*=== Colors === */
     --first-color: #20b2AA;
     --first-color-rgb: #20b990;
+    --second-color: #198b86;
+    --second-color-rgb: #188d6e;
     --first-color-box: #290F09;
-    --text-color-white: white;
-    --text-color-black: black;
+    --color-orange: darkgoldenrod;
+    --color-blue: dodgerblue;
+    --color-white: white;
+    --color-black: black;
 
     /*=== Fonts/Typography ===*/
     --font-unic: 'Poppins', sans-serif;
@@ -18,8 +22,10 @@ body{
     background-image: linear-gradient(to right, var(--first-color), var(--first-color-rgb));
 }
 
+
+/* Div completa do formulario */
 .main-box{
-    color: var(--text-color-white);
+    color: var(--color-white);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,6 +36,8 @@ body{
     width: 30%;
 }
 
+
+/* Titulo do formulario */
 .single-top{
     text-align: center;
     text-transform: uppercase;
@@ -45,58 +53,59 @@ fieldset{
     position: relative;
 }
 
+/* Digitação dentro do input label */
 .user-input{
     background: none;
     border: none;
-    border-bottom: .1rem solid white;
+    border-bottom: .1rem solid var(--color-white);
     outline: none;
-    color: var(--text-color-white);
+    color: var(--color-white);
     font-size: 1rem;
     width: 100%;
-    letter-spacing: .2rem;
+    letter-spacing: .02rem;
 }
 
-.city-input{
-    background: none;
-    border: none;
-    border-bottom: .1rem solid white;
-    outline: none;
-    color: var(--text-color-white);
-    font-size: 1rem;
-    width: 100%;
-    letter-spacing: .2rem;
-}
 
-.state-input{
-    background: none;
-    border: none;
-    border-bottom: .1rem solid white;
-    outline: none;
-    color: var(--text-color-white);
-    font-size: 1rem;
-    width: 100%;
-    letter-spacing: .2rem;
-}
-
-.address-input{
-    background: none;
-    border: none;
-    border-bottom: .1rem solid white;
-    outline: none;
-    color: var(--text-color-white);
-    font-size: 1rem;
-    width: 100%;
-    letter-spacing: .2rem;
-}
-
+/* Todos os label do formulario, exceto data */
 .input-label{
     position: absolute;
     top: 0rem;
     left: 0rem;
     pointer-events: none;
-    transition: .5s;
+    transition: .1s;
 }
 
-.user-input:focus ~ .input-label{
-    font-size: 0px;
+
+/* Propriedade de focus nos campos de digitação */
+.user-input:focus ~ .input-label, .user-input:valid ~ .input-label{
+    top: -1rem;
+    font-size: 0.9rem;
+    color: var(--color-orange);
+}
+
+
+/* Campo de data  */
+#input-date{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+/* Botão de enviar */
+#submit{
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    background-image: linear-gradient(to right, var(--first-color), var(--first-color-rgb));
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, var(--second-color), var(--second-color-rgb));
 }
