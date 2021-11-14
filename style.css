@@ -1,0 +1,111 @@
+:root{
+    /*=== Colors === */
+    --first-color: #20b2AA;
+    --first-color-rgb: #20b990;
+    --second-color: #198b86;
+    --second-color-rgb: #188d6e;
+    --first-color-box: #290F09;
+    --color-orange: darkgoldenrod;
+    --color-blue: dodgerblue;
+    --color-white: white;
+    --color-black: black;
+
+    /*=== Fonts/Typography ===*/
+    --font-unic: 'Poppins', sans-serif;
+
+    /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+body{
+    font-family: var(--font-unic);
+    background-image: linear-gradient(to right, var(--first-color), var(--first-color-rgb));
+}
+
+
+/* Div completa do formulario */
+.main-box{
+    color: var(--color-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem;
+    border-radius: .8rem;
+    width: 30%;
+}
+
+
+/* Titulo do formulario */
+.single-top{
+    text-align: center;
+    text-transform: uppercase;
+    border: .15rem solid var(--first-color);
+    padding: .5rem;
+}
+
+fieldset{
+    border: .15rem solid var(--first-color);
+}
+
+.input-box{
+    position: relative;
+}
+
+/* Digitação dentro do input label */
+.user-input{
+    background: none;
+    border: none;
+    border-bottom: .1rem solid var(--color-white);
+    outline: none;
+    color: var(--color-white);
+    font-size: 1rem;
+    width: 100%;
+    letter-spacing: .02rem;
+}
+
+
+/* Todos os label do formulario, exceto data */
+.input-label{
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    pointer-events: none;
+    transition: .1s;
+}
+
+
+/* Propriedade de focus nos campos de digitação */
+.user-input:focus ~ .input-label, .user-input:valid ~ .input-label{
+    top: -1rem;
+    font-size: 0.9rem;
+    color: var(--color-orange);
+}
+
+
+/* Campo de data  */
+#input-date{
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.6rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+
+/* Botão de enviar */
+#submit{
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.3rem;
+    background-image: linear-gradient(to right, var(--first-color), var(--first-color-rgb));
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-image: linear-gradient(to right, var(--second-color), var(--second-color-rgb));
+}
